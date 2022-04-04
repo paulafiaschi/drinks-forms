@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drinks Forms</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <style>
+    :root {
+      accent-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <form action="">
+    <h2>Add a drink to your database</h2>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <!-- <span id="hint-name">Must be at least 1 character long</span> -->
+      <input id="name" name="xyz" type="text" placeholder="&nbsp;" required>
+      <span class="error" id="err-name" aria-live="assertive">Type in a name</span>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <!-- <span id="hint-name">Must be at least 1 character long</span> -->
+      <input id="price" name="xyz" type="text" placeholder="&nbsp;" required>
+      <span>dkk</span>
+      <span class="error" id="err-price" aria-live="assertive">Insert a valid number</span>
+    </div>
+
+    <div class="form-group">
+      <label for="colors">Color</label>
+      <!-- <span id="hint-colors">Pick a color</span> -->
+      <input id="colors" name="xyz" type="color" placeholder="&nbsp;" aria-describedby="hint-user" autocomplete="xyz"
+        required>
+      <span class="error" id="err-color" aria-live="assertive">Pick the main color of the drink</span>
+    </div>
+
+    <div class="form-group">
+      <label for="glass-type">Glass type</label>
+      <!-- <span id="glass-type">Must be at least 8 characters with at least 1 digit, 1 lowercase and 1 uppercase
+        character</span> -->
+      <select id="glass-type" name="glass-type" required>
+        <option value="large">Large</option>
+        <option value="medium">Medium</option>
+        <option value="small">Small</option>
+      </select>
+
+      <span class="error" id="err-glass" aria-live="assertive">Select type of glass</span>
+    </div>
+
+    <div class="form-group">
+      <!-- <label for="category">Category</label> -->
+      <input type="radio" id="catA" name="categories" checked>
+      <label for="catA">cat A</label>
+      <input type="radio" id="catB" name="categories">
+      <label for="catB">cat B</label>
+      <input type="radio" id="catC" name="categories">
+      <label for="catC">cat C</label>
+
+    </div>
+
+    <div class="form-group">
+      <label for="ingredients">Ingredients</label>
+      <input type="text" name="ingredients" id="ingredients">
+      <span id="hint-ingr">Enter one ingredient per line</span>
+    </div>
+
+    <div class="form-group">
+      <label for="garnish">Garnish</label>
+      <input type="text" name="garnish" id="garnish">
+      <span id="hint-gar">Enter one garnish per line</span>
+    </div>
+
+    <div class="form-group">
+      <label for="happy-hour">Happy hour?</label>
+      <input type="checkbox" id="happy-hour">
+    </div>
+
+    <button>Add drink</button>
+  </form>
+
+  <div class="card"></div>
+</body>
+
+</html>

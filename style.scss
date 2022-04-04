@@ -1,0 +1,107 @@
+input:valid {
+  border-color: green;
+}
+
+input:invalid:not(:placeholder-shown, :focus) {
+  border-color: red;
+}
+
+input:invalid:not(:placeholder-shown, :focus) + .error {
+  max-height: 2rem;
+}
+
+.error {
+  color: crimson;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s max-height;
+}
+
+input::placeholder {
+  opacity: 0;
+}
+
+form {
+  margin: 0 0 2rem;
+  max-width: 350px;
+}
+
+form > * + *,
+fieldset > * + *:not(.address) {
+  margin-top: 1.5rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 5px;
+}
+
+label {
+  font-weight: 700;
+  line-height: 1;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #212121;
+  border: 1px solid #21212133;
+  background: #f5f5f5;
+  padding: 8px 12px 10px;
+  border-radius: 4px;
+  outline: none;
+  caret-color: rebeccapurple;
+}
+
+input:focus {
+  border-color: rebeccapurple;
+}
+
+[id*="hint"],
+span {
+  color: #585858;
+  line-height: 1.4;
+  transition: 0.3s;
+}
+
+.form-group:focus-within span {
+  color: rebeccapurple;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+legend {
+  padding: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+legend + .form-group {
+  margin-top: 1rem;
+}
+
+button {
+  color: #212121;
+  border: 1px solid #21212133;
+  background: rebeccapurple;
+  font-weight: 600;
+  color: #fff;
+  padding: 8px 12px 10px;
+  border-radius: 4px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  place-content: center;
+  font-family: "Inter", sans-serif;
+}
